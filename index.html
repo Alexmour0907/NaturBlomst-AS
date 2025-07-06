@@ -17,9 +17,9 @@
     <div class="top-contact-bar" id="top">
         <div class="container">
             <div class="contact-info">
-                <span><i class="fas fa-map-marker-alt"></i> Parkveien 17, 2615 Lillehammer</span>
-                <span><i class="fas fa-envelope"></i> post@naturblomst.no</span>
-                <span><i class="fas fa-phone"></i> +47 922 40 123</span>
+                <span><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Kirkegata+45,+2609+Lillehammer" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Kirkegata 45, 2609 Lillehammer</a></span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:post@naturblomst.no" style="color: inherit; text-decoration: none;">post@naturblomst.no</a></span>
+                <span><i class="fas fa-phone"></i> +47 12 34 56 78</span>
             </div>
             <div class="social-media">
                 <a href="https://www.facebook.com/NaturBlomst-AS" target="_blank" rel="noopener noreferrer" aria-label="Facebook - NaturBlomst AS"><i class="fab fa-facebook-f"></i></a>
@@ -42,6 +42,7 @@
                 <li><a href="#top">Hjem</a></li>
                 <li><a href="#tjenester">Tjenester</a></li>
                 <li><a href="#om-oss">Om oss</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
             <div class="nav-actions">
@@ -380,9 +381,176 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Ofte stilte spørsmål</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Hvor lang tid tar et hageprosjekt?</h4>
+                    <p>Avhenger av størrelse, men typisk 2-8 uker for private hager, 1-3 måneder for større prosjekter.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Jobber dere på vinteren?</h4>
+                    <p>Vi planlegger om vinteren og utfører fra april til oktober. Noen oppgaver kan gjøres året rundt.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Tilbyr dere finansiering?</h4>
+                    <p>Vi samarbeider med flere banker og kan hjelpe med å finne gode løsninger.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Hva hvis jeg ikke er fornøyd?</h4>
+                    <p>Vi har 2 års garanti på alt arbeid og 1 års vekstgaranti på planter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="kontakt">
+        <div class="container">
+            <div class="contact-header">
+                <h2>La oss skape noe vakkert sammen</h2>
+                <p class="contact-subtitle">Vi brenner for å høre om dine planer og drømmer for uteområdet ditt</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Address & Map Card -->
+                <div class="contact-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Besøksadresse & Åpningstider</h3>
+                    <div class="address-info">
+                        <p><strong>Adresse:</strong><br>
+                        <a href="https://www.google.com/maps/place/Kirkegata+45,+2609+Lillehammer" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                        NaturBlomst AS<br>
+                        Kirkegata 45<br>
+                        2609 Lillehammer</a></p>
+                    </div>
+                    
+                    <div class="opening-hours">
+                        <p><strong>Åpningstider:</strong></p>
+                        <p><strong>Kontor:</strong> Man-Fre 08:00-16:00, Lør 09:00-14:00<br>
+                        <strong>Feltarbeid:</strong> Man-Fre 07:00-16:00, Lør 08:00-15:00<br>
+                        <strong>Akutt/hasteservice:</strong> 24/7 - Ring +47 12 34 56 78</p>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1927.29794653371!2d10.463992277367185!3d61.11494166683381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x466a8804214f398b%3A0xe6e907ebcb4285d4!2sKirkegata%2045%2C%202609%20Lillehammer!5e0!3m2!1sno!2sno!4v1751822955467!5m2!1sno!2sno" width="100%" height="200" style="border:0; border-radius: 8px; margin-top: 1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form Card -->
+                <div class="contact-card">
+                    <h3><i class="fas fa-envelope"></i> Send oss en melding</h3>
+                    <form class="simple-contact-form">
+                        <input type="text" placeholder="Navn" required>
+                        <input type="tel" placeholder="Telefon" required>
+                        <input type="email" placeholder="E-post" required>
+                        <select required>
+                            <option value="">Velg tjeneste</option>
+                            <option value="hagedesign">Hagedesign for privatperson</option>
+                            <option value="borettslag">Borettslag/sameie-prosjekt</option>
+                            <option value="skole">Skole/barnehage-løsning</option>
+                            <option value="vedlikehold">Vedlikehold og service</option>
+                            <option value="rådgivning">Rådgivning og konsultasjon</option>
+                            <option value="annet">Annet</option>
+                        </select>
+                        <textarea placeholder="Beskriv ditt prosjekt kort" rows="3"></textarea>
+                        <button type="submit" class="btn-send-full">Send melding</button>
+                    </form>
+                </div>
+
+                <!-- Pricing Card -->
+                <div class="contact-card">
+                    <h3><i class="fas fa-money-bill-wave"></i> Priser</h3>
+                    <div class="pricing-simple">
+                        <div class="price-item">
+                            <strong>Gratis:</strong> Telefonrådgivning, første befaring, pristilbud
+                        </div>
+                        <div class="price-item">
+                            <strong>Konsultasjon:</strong> 950,-/time
+                        </div>
+                        <div class="price-item">
+                            <strong>Hagedesign:</strong> Fra 5.000,-
+                        </div>
+                        <div class="price-item">
+                            <strong>Fagarbeider:</strong> 650,-/time
+                        </div>
+                        <div class="pricing-note-simple">
+                            Alle priser eks. mva. Fastpris for prosjekter over 25.000,-
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Area Card -->
+                <div class="contact-card">
+                    <h3><i class="fas fa-map"></i> Arbeidsområde</h3>
+                    <div class="work-area-simple">
+                        <div class="main-area-simple">
+                            <strong>Hovedområde (ingen reisetillegg):</strong>
+                            <p>Lillehammer, Gausdal, Øyer, Ringebu</p>
+                        </div>
+                        <div class="extended-area-simple">
+                            <strong>Utvidet område (med reisetillegg):</strong>
+                            <p>Hamar, Gjøvik, Vinstra, Fagernes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Tilbake til toppen">
         <i class="fas fa-chevron-up"></i>
     </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="./Images/logo-ingenbg.png" alt="NaturBlomst AS Logo" class="footer-logo">
+                        <h3>NaturBlomst AS</h3>
+                    </div>
+                    <p>Vi skaper grønne rom der livet blomstrer</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/naturblomst_no" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/NaturBlomst-AS" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/company/naturblomst-as" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/naturblomst_no" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +47 12 34 56 78</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:post@naturblomst.no" style="color: inherit; text-decoration: none;">post@naturblomst.no</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Kirkegata+45,+2609+Lillehammer" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Kirkegata 45, 2609 Lillehammer</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Spesialister</h4>
+                    <div class="footer-specialists">
+                        <p><strong>Plantespørsmål:</strong><br>Kari Haugen - +47 12 34 56 78</p>
+                        <p><strong>Store prosjekter:</strong><br>Ola Nordberg - +47 12 34 56 78</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>© 2025 NaturBlomst AS | Org.nr: 928 734 156 MVA</p>
+                </div>
+                <div class="footer-developer">
+                    <p class="developer-credit">utviklet av Alexander Mouritsen</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
