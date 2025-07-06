@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initScrollEffects();
     initContactForm();
+    initServiceCards();
+    initBackToTop();
 });
 
 // Mobile Navigation Toggle
@@ -67,21 +69,6 @@ function initSmoothScrolling() {
 
 // Scroll Effects
 function initScrollEffects() {
-    const navbar = document.querySelector('.navbar');
-    const topContactBar = document.querySelector('.top-contact-bar');
-    const contactBarHeight = topContactBar ? topContactBar.offsetHeight : 0;
-    
-    // Navbar position change on scroll
-    window.addEventListener('scroll', function() {
-        const scrollY = window.scrollY;
-        
-        if (scrollY > contactBarHeight) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-    
     // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
@@ -122,6 +109,71 @@ function initContactForm() {
             // Simulate form submission
             showNotification('Takk for henvendelsen! Vi kontakter deg snart.', 'success');
             contactForm.reset();
+        });
+    }
+}
+
+// Service Cards Expandable Functionality
+function initServiceCards() {
+    const serviceLinks = document.querySelectorAll('.service-link');
+    
+    serviceLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const serviceType = this.getAttribute('data-service');
+            const expandedSection = document.getElementById(serviceType + '-expanded');
+            const isActive = expandedSection.classList.contains('active');
+            
+            // Close all expanded sections
+            document.querySelectorAll('.service-expanded').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active state from all links
+            document.querySelectorAll('.service-link').forEach(serviceLink => {
+                serviceLink.classList.remove('active');
+                serviceLink.textContent = 'LES MER';
+            });
+            
+            // If this section wasn't active, open it
+            if (!isActive) {
+                expandedSection.classList.add('active');
+                this.classList.add('active');
+                this.textContent = 'LUKK';
+                
+                // Smooth scroll to the expanded content
+                setTimeout(() => {
+                    expandedSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest'
+                    });
+                }, 300);
+            }
+        });
+    });
+}
+
+// Back to Top Button
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    if (backToTopBtn) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        // Smooth scroll to top when clicked
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     }
 }
@@ -266,6 +318,33 @@ const mobileMenuStyles = `
     }
     
     .notification-info {
+        background: var(--moss-green);
+    }
+    
+    #backToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--leaf-green);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        z-index: 1000;
+        transition: background 0.3s ease;
+    }
+    
+    #backToTop.show {
+        display: flex;
+    }
+    
+    #backToTop:hover {
         background: var(--moss-green);
     }
 `;
