@@ -2116,9 +2116,21 @@ body.nav-open {
         gap: var(--spacing-sm);
     }
     
-    .member-photo img {
-        width: 80px;
-        height: 80px;
+    .team-member .member-photo {
+        width: 80px !important;
+        height: 80px !important;
+        border-radius: 50% !important;
+        overflow: hidden !important;
+        border: 2px solid var(--moss-green) !important;
+        margin: 0 auto var(--spacing-sm) !important;
+    }
+    
+    .team-member .member-photo img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
     }
     
     .member-info h4 {
